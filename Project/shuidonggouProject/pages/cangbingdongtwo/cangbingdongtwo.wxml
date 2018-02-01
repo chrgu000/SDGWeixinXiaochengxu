@@ -1,0 +1,30 @@
+
+<view class="container">
+  
+  <scroll-view class="imgScroll" scroll-left="{{ leftOffset }}" scroll-x="true"  scroll-y="true" style="height:{{ scrollHeight }}px;width:{{ scrollWidth }}px">
+      <image style="width:{{ scaleWidth }}px;height:{{ scaleHeight }}px" mode="scaleToFill" bindload = "imgload" src="{{ imageUrl }}"></image>
+
+  <view wx:for="{{pointList}}" wx:for-index="idx" wx:for-item="item" data-item="{{item}}" style="position:absolute;left:{{ item.left }}px;top:{{ item.top }}px;width:20px;height:30px"  bindtap="playAudio" ></view>
+    
+  </scroll-view>
+
+  
+</view>
+
+<view class="drawer_screen" bindtap="powerDrawer"  wx:if="{{showTanchuan}}"></view>  
+ 
+<view class="drawer_box" wx:if="{{showTanchuan}}"> 
+  <view class="drawer_title1">{{currentPlace.name}}
+    <icon class="iconClear" type="clear" size="25" bindtap="powerDrawer"/>
+  </view> 
+  
+  <view class="drawer_content">
+    <view class="imageView">
+      <image class="drawer_image" wx:if="{{isStop}}" src="../../images/stop.jpg" mode="aspectFill" bindtap="stopImageTap"></image>
+      <image class="drawer_image" wx:else src="../../images/bofang.jpg" mode="aspectFill" bindtap="bofangImageTap"></image>
+    </view>
+    <view class="placedesc">{{currentPlace.desc}}</view>
+  </view> 
+  
+  <button class="btn_ok" type="primary" bindtap="sceneDetail">详情</button>  
+</view> 

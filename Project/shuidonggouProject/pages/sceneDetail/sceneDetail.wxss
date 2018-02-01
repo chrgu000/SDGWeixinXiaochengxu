@@ -1,0 +1,13 @@
+.viewText{
+  padding: 10px;
+}
+
+.container{
+  overflow-y: scroll;
+}
+
+.product-detail-imgs image{
+  width: 100%;
+
+  float: left;
+}

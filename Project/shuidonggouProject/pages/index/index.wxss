@@ -1,0 +1,105 @@
+.imgScroll {
+  background: #AAA;
+  width: 100%;  
+  overflow:scroll;
+
+}
+.mycontainer{
+  width: 100%;
+  height: 100%;
+  /* display: flex; */
+  overflow-y:hidden;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: space-between;
+}
+/*mask*/  
+.drawer_screen {  
+  width: 100%;  
+  height: 100%;  
+  position: fixed;  
+  top: 0;  
+  left: 0;  
+  z-index: 1000;  
+  background: #000;  
+  opacity: 0.5;  
+  overflow: hidden;  
+}  
+  
+/*content*/  
+.drawer_box {  
+  width: 650rpx;  
+  overflow: hidden;  
+  position: fixed;  
+  top: 50%;  
+  left: 0;  
+  z-index: 1001;  
+  background: #FAFAFA;  
+  margin: -150px 50rpx 0 50rpx;  
+  border-radius: 4px;  
+}  
+.drawer_title1{
+  padding: 10px;
+  width: 100%;
+}
+
+.iconClear{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.drawer_content{
+  display: flex;
+  padding: 10px;
+}
+.imageView{
+  
+  height: 105px;
+}
+.drawer_image{
+  width: 105px;
+  height: 105px;
+}
+.placedesc{
+  margin-left: 3px;
+  font-size: 28rpx;
+  height: 105px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.btn_ok{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.youxiantu{
+  text-align: center;
+  color: black;
+  width: 33.3%;
+  height: 25px;
+}
+.youxiantu1{
+  text-align: center;
+  color: black;
+  width: 33.3%;
+  height: 25px;
+}
+.youxiantu2{
+  text-align: center;
+  color: black;
+  width: 33.3%;
+  height: 25px;
+}
+
+.green_hover{
+  /* border: 1px solid black; */
+  background: black;
+  opacity: 0.5
+}
+.botView{
+
+  background: #FFF; 
+  display: inline-flex;
+  width: 100%;
+}
+

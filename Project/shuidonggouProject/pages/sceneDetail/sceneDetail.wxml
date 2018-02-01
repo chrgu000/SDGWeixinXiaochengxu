@@ -1,0 +1,13 @@
+<view class="container">
+
+  <view class='viewText'>{{curentPlace.cn_name}}</view>
+  <view class='viewText'>{{curentPlace.cn_desc}}</view>
+  <view class='viewText'>{{curentPlace.en_name}}</view>
+  <view class='viewText'>{{curentPlace.en_desc}}</view>
+  
+  <view class="product-detail-imgs">
+                <block wx:for="{{curentPlace.imgs}}" wx:key="item">
+                    <image src="{{item.img_url.url}}" mode="widthFix"></image>
+                </block>
+            </view>
+</view>

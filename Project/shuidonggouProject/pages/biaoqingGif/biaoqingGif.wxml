@@ -1,0 +1,14 @@
+
+<view class="container">
+
+  <view class="home-main-products">
+    <view class="products-box">
+          <block wx:for="{{gifArr}}" wx:key="item">
+              <view class="products-item" bindtap="onProductsItemTap" data-url="{{item.url}}">
+                  <image class="products-image" src="{{item.url}}" mode="aspectFill"></image>
+              </view>
+          </block>
+      </view>
+
+  </view>
+</view>

@@ -1,0 +1,66 @@
+
+<view class="mycontainer">
+  <!-- bindtouchstart="begintap"  bindtouchmove="movetap" bindtouchend="endtap" -->
+   <scroll-view class="imgScroll"  scroll-x="true"  scroll-y="true" style="height:{{scrollHeight}}px;width:{{ scrollWidth }}px" scroll-left="{{ leftOffset }}" scroll-top="1500" >
+      <image style="width:{{ scaleWidth }}px;height:{{ scaleHeight}}px" mode="scaleToFill" bindload = "imgload" src="{{ imageUrl }}"></image>
+
+    <view  wx:for="{{pointList}}" wx:key="item" data-items="{{item}}" style="position:absolute;left:{{ item.left }}px;top:{{ item.top }}px;width:30px;height:46px; "   bindtap="playAudio" ></view>
+
+    <image wx:if="{{showYouxiantu1}}" style="position:absolute;left:{{ youxiantu1.left }}px;top:{{ youxiantu1.top }}px;width:{{ youxiantu1.width }}px;height:{{ youxiantu1.height }}px"   bindtap="playAudio" src="../../images/youxiantu1.png" ></image>
+
+   <image wx:if="{{showYouxiantu2}}" style="position:absolute;left:{{ youxiantu2.left }}px;top:{{ youxiantu2.top }}px;width:{{ youxiantu2.width }}px;height:{{ youxiantu2.height }}px"   bindtap="playAudio" src="../../images/youxiantu2.png" ></image>
+
+    <image wx:if="{{showYouxiantu3}}" style="position:absolute;left:{{ youxiantu3.left }}px;top:{{ youxiantu3.top }}px;width:{{ youxiantu3.width }}px;height:{{ youxiantu3.height }}px"   bindtap="playAudio" src="../../images/youxiantu3.png" ></image>
+
+
+  </scroll-view>
+
+
+
+
+</view>
+
+<view class="drawer_screen" bindtap="powerDrawer"  wx:if="{{showTanchuan}}"></view>  
+ 
+<view class="drawer_box" wx:if="{{showTanchuan}}"> 
+  <view class="drawer_title1">{{currentPlace.name}}
+    <icon class="iconClear" type="clear" size="25" bindtap="powerDrawer"/>
+  </view> 
+  
+  <view class="drawer_content">
+    <view class="imageView">
+      <image class="drawer_image" wx:if="{{isStop}}" src="../../images/stop.jpg" mode="aspectFill" bindtap="stopImageTap"></image>
+      <image class="drawer_image" wx:else src="../../images/bofang.jpg" mode="aspectFill" bindtap="bofangImageTap"></image>
+    </view>
+    <view class="placedesc">{{currentPlace.desc}}</view>
+  </view> 
+  
+  <button class="btn_ok" type="primary" bindtap="sceneDetail">详情</button>  
+</view>  
+
+
+<view class='botView' style="position:absolute;left:0px;bottom:0px;width:100%;height:30px">
+    <view class="youxiantu" bindtap="youxiantuTap" hover="true" hover-class="green_hover">游线图 
+    </view>
+    <view class="youxiantu1"  bindtap="jingquTap" hover="true" hover-class="green_hover">景区 
+    </view>
+    <view class="youxiantu2"  bindtap="setLanguage" hover="true" hover-class="green_hover"> 语言</view>
+  </view> 
+
+<view class="imageLocation" style="position:absolute;left:20px;top:{{ locationPoint.top -80 }}px;width:20px;height:20px" bindtap="dofangda">
+   <image style="width:20px;height:20px"  src="../../images/fangda.png" mode="aspectFill"></image> 
+</view>
+
+<view class="imageLocation" style="position:absolute;left:20px;top:{{ locationPoint.top -35}}px;width:20px;height:20px" bindtap="dosuoxiao" >
+   <image style="width:20px;height:20px"  src="../../images/suxiao.png" mode="aspectFill"></image> 
+</view>
+
+<image style="position:absolute;left:20px;top:{{ locationPoint.top }}px;width:38px;height:38px"  src="../../images/mylocation.png" mode="aspectFill"></image> 
+
+<view class="imageLocation" style="position:absolute;left:20px;top:{{ locationPoint.top }}px;width:38px;height:38px" bindtap="doLocation" hover="true" hover-class="green_hover">
+</view>
+ 
+
+  
+
+

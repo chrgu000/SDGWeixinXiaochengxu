@@ -1,0 +1,57 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.6.6",
+	"appid": "wxf4758fd1765277c9",
+	"projectname": "%E6%B0%B4%E6%B4%9E%E6%B2%9F",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "123",
+					"pathName": "pages/Bowuguan/Bowuguan",
+					"query": "defalt=6",
+					"scene": "1011"
+				},
+				{
+					"id": 1,
+					"name": "index",
+					"pathName": "pages/index/index",
+					"query": "defalt=10",
+					"scene": "1011"
+				},
+				{
+					"id": -1,
+					"name": "cangbingdongone",
+					"pathName": "pages/cangbingdongone/cangbingdongone",
+					"query": "defalt=0",
+					"scene": "1011"
+				},
+				{
+					"id": 3,
+					"name": "cangbingdongtwo",
+					"pathName": "pages/cangbingdongtwo/cangbingdongtwo",
+					"query": "defalt=8",
+					"scene": "1011"
+				}
+			]
+		}
+	}
+}
