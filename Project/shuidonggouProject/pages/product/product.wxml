@@ -1,16 +1,18 @@
-<import src="../tpls/products/products-tpl.wxml"/>
+<!-- <import src="../tpls/products/products-tpl.wxml"/> -->
+<import src="../tpls/products1/products1-tpl.wxml"/>
 <view class="container">
   <swiper indicator-dots="true" autoplay="true" class="swiper">
         <block wx:for="{{bannerArr}}" wx:key="item">
-            <swiper-item class="banner-item" data-id="{{item.key_word}}" bindtap="onProductsItemTap">
+             <!-- <swiper-item class="banner-item" data-id="{{item.key_word}}" bindtap="onProductsItemTap">  -->
+			  <swiper-item class="banner-item" data-id="{{item.key_word}}" >  
                 <image class="item-image" src="{{item.img.url}}" mode="aspectFill" />
             </swiper-item>
         </block>
     </swiper>
 
       <view class="home-main-products">
-          <view class="home-main-header">商品列表</view>
-          <template is="products" data="{{productsArr:productsArr}}"/>
+          <view class="home-main-header">票务列表</view>
+          <template is="products1" data="{{productsArr:productsArr}}"/>
       </view>
 
 </view>

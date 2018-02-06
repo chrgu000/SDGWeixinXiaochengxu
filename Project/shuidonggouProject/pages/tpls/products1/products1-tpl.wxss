@@ -1,0 +1,45 @@
+.products1-box{
+  margin:0 20rpx 20rpx 20rpx;
+  display: flex;
+}
+.products1-box .itemMain{
+	margin-bottom: 15rpx;
+    background-color:#B42F2D;
+    border-radius: 4rpx;
+	flex-flow:column;
+}
+
+.item-left{
+	flex: 1;
+    margin-left: 20rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.item-right{
+    display: flex;
+    flex-basis: 120rpx;
+    align-items: center;
+    justify-content:flex-end;
+}
+
+.item-left .name{
+  font-size: 34rpx;
+}
+.item-left .price{
+  font-size: 28rpx;
+}
+
+.item-right .pay{
+    width: 170rpx;
+    height: 60rpx;
+    margin-right: 30rpx;
+    background-color:#B42F2D;
+    border-radius: 4rpx;
+    color: #fff;
+    text-align: center;
+    line-height: 60rpx;
+}
+.item-right .pay:active{
+    background-color:#9a211f;
+}

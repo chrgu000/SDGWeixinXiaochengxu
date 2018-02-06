@@ -1,0 +1,16 @@
+<template name="products1">
+    <view class="products1-box">
+        <block wx:for="{{productsArr}}" wx:key="item">
+            <view class="itemMain" data-id="{{item.id}}">
+             
+                <view class="item-left">
+                    <text class="name">{{item.name}}</text>
+                    <view class="price">￥{{item.price}}</view>
+                </view>
+				<view class="item-right">
+					<view class="pay" ontap="checkCode" data-item="{{item}}" data-index="{{index}}">购买</view>
+           		</view>
+            </view>
+        </block>
+    </view>
+</template>

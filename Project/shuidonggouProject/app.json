@@ -38,7 +38,7 @@
                 "pagePath": "pages/product/product",
                 "iconPath": "images/icons/btn-tabs_03.png",
                 "selectedIconPath": "images/icons/btn-tabs_08.png",
-                "text": "商品"
+                "text": "订票"
             },
             {
                 "pagePath": "pages/my/my",
