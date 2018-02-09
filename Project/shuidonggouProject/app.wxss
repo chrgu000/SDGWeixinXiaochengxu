@@ -1,6 +1,7 @@
 /**app.wxss**/
 
 /* reset */
+@import 'style/weui.wxss';
 page {
   background-color: #FFFFFF;
   height: 100%;

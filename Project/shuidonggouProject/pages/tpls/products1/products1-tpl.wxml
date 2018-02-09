@@ -1,16 +1,28 @@
 <template name="products1">
     <view class="products1-box">
         <block wx:for="{{productsArr}}" wx:key="item">
-            <view class="itemMain" data-id="{{item.id}}">
-             
-                <view class="item-left">
-                    <text class="name">{{item.name}}</text>
-                    <view class="price">￥{{item.price}}</view>
-                </view>
-				<view class="item-right">
-					<view class="pay" ontap="checkCode" data-item="{{item}}" data-index="{{index}}">购买</view>
-           		</view>
-            </view>
+			<view class="products-item1" style="margin-bottom: 25px;" > 
+				<view class="weui-form-preview">
+				<view class="weui-form-preview__hd">
+					<view class="weui-form-preview__label">门票名称</view>
+					<view class="weui-form-preview__value_in-hd">{{item.name}}</view>
+				</view>
+				<view class="weui-form-preview__bd">
+					<view class="weui-form-preview__item">
+						<view class="weui-form-preview__label">价格</view>
+						<view class="weui-form-preview__value">￥{{item.price}}</view>
+					</view>
+					<view class="weui-form-preview__item">
+						<view class="weui-form-preview__label">说明</view>
+						<view class="weui-form-preview__value">{{item.summary}}</view>
+					</view>
+				</view>
+				<view class="weui-form-preview__ft">
+					<view class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active" bindtap="onJoinGwc" data-item="{{item}}">加入购物车</view>
+				</view>
+				
+			</view>
+			</view>
         </block>
     </view>
 </template>

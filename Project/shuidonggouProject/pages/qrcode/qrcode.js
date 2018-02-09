@@ -5,31 +5,33 @@ var qrcode;
 
 Page({
     data: {
-		loadingHidden: false,
-        image: '',
 		userInfo:null,
 		ticketInfo:null
     },
     onLoad: function (options) {
-		console.log(options)
-		this.setData({
-			ticketInfo: options.item,
-			userInfo: options.rinfo
-		});
-
+		
+		var info = options.item;
+		var ascStr = this.str2Ascii(info)
+		console.log(ascStr)
         qrcode = new QRCode('canvas', {
-            text: "https://github.com/tomfriwel/weapp-qrcode",
-            width: 150,
-            height: 150,
-            colorDark: "#1CA4FC",
+			text: ascStr,
+            width: 200,
+            height: 200,
+            colorDark: "#000000",
             colorLight: "white",
             correctLevel: QRCode.CorrectLevel.H,
         });
     },
-    confirmHandler: function (e) {
-        var value = e.detail.value
-        qrcode.makeCode(value)
-    },
+	
+	str2Ascii: function (info){
+		var val = ''
+		for (var char in info){
+			var ascChar = char.charCodeAt();
+			val = val + ' '
+			val = val + ascChar
+		}
+		return val;
+	},
     inputHandler: function (e) {
         var value = e.detail.value
         this.setData({

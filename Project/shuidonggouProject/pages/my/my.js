@@ -148,43 +148,27 @@ Page({
 		});
 		var item = order.getDataSet(event, 'item');
 		var rInfo = this.data.realInfo;
-		var paramsall = [{'method': 'GetOrderList'},
-			{'mobileNoOrOderNo': item.order_no},
-			{ 'createMan': '水洞沟小程序' }];
-	
+		var urls = 'https://shuidonggou88.cn/zerg/public/api/v1/checkThirdTicket?orderNo=' + item.order_no + '&mobileNo=' + rInfo.mobile + '&IdentityNo=' + rInfo.cardid + '&name=' + rInfo.name + '&lstCount=' + item.total_count
+		
 		wx.request({
-			url: 'https://shuidonggou88.cn/zerg/public/api/v1/checkThirdTicket',
-			data: { params: paramsall },
-			method: 'post',
+			url: urls,
+			method: 'get',
 			header: {
 				'content-type': 'application/json',
 			},
 			success: function (res) {
-				// 判断以2（2xx)开头的状态码为正确
-				// 异常不要返回到回调中，就在request中处理，记录日志并showToast一个统一的错误即可
-				console.log(res)
-				// var code = res.statusCode.toString();
-				// var startChar = code.charAt(0);
-				// if (startChar == '2') {
-				// 	params.sCallback && params.sCallback(res.data);
-				// } else {
-				// 	if (code == '401') {
-				// 		if (!noRefetch) {
-				// 			that._refetch(params);
-				// 		}
-				// 	}
-				// 	that._processError(res);
-				// 	params.eCallback && params.eCallback(res.data);
-				// }
+				var reserveNo = res.data.thirdReserveNo;
+				
+				wx.navigateTo({
+					url: '../qrcode/qrcode?item=' + reserveNo
+         		 });
 			}, fail: function (err) {
 				that.showTips('提示','查询订单失败')
 			}
 		})
 
 
-		wx.navigateTo({
-			url: '../qrcode/qrcode?item=' + JSON.stringify(item) + '&rinfo=' + JSON.stringify(rInfo) 
-          });
+		
 	},
     /*下拉刷新页面*/
     onPullDownRefresh: function(){

@@ -52,9 +52,9 @@
   <view class="order-main">
     <block wx:for="{{productsArr}}">
       <view class="product-item">
-        <view class="item-left">
+        <!-- <view class="item-left">
           <image src="{{item.main_img_url}}"></image>
-        </view>
+        </view> -->
         <view class="item-middle">
           <view>{{item.name}}</view>
           <view>￥{{item.price}}</view>

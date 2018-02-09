@@ -8,9 +8,9 @@
                             <image wx:if="{{item.selectStatus}}" src="../../images/icons/circle@selected.png"></image>
                             <image wx:else src="../../images/icons/circle@noselected.png"></image>
                         </view>
-                        <view class="cart-item-img" bindtap="onProductsItemTap" data-id="{{item.id}}">
+                        <!-- <view class="cart-item-img" bindtap="onProductsItemTap" data-id="{{item.id}}">
                             <image class="good-image" src="{{item.main_img_url}}"></image>
-                        </view>
+                        </view> -->
                         <view class="cart-item-word">
                             <view class="title-box">
                                 <text class="title">{{item.name}}</text>

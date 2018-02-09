@@ -38,9 +38,9 @@
             <text class="order-no-txt">{{item.order_no}}</text>
           </view>
           <view class="order-main" ontap="showOrderDetailInfo" data-id="{{item.id}}">
-            <view class="item-left">
+            <!-- <view class="item-left">
               <image src="{{item.snap_img}}"></image>
-            </view>
+            </view> -->
             <view class="item-middle">
               <view>{{item.snap_name}}</view>
               <view>{{item.total_count}}件商品</view>
