@@ -30,6 +30,12 @@ Page({
             loadingHidden:true,
             cartData:cartData
         });
+		var data = this.data.cartData,
+			len = data.length;
+		for (let i = 0; i < len; i++) {
+			data[i].selectStatus = false;
+		}
+		this._resetCartData();
     },
 
     /*离开页面时，更新本地缓存*/
@@ -115,10 +121,15 @@ Page({
 
     /*选择商品*/
     toggleSelect:function(event){
+		var data = this.data.cartData,
+			len = data.length;
+		for (let i = 0; i < len; i++) {
+			data[i].selectStatus = false;
+		}
         var id=cart.getDataSet(event,'id'),
             status=cart.getDataSet(event,'status'),
             index=this._getProductIndexById(id);
-        this.data.cartData[index].selectStatus=!status;
+        this.data.cartData[index].selectStatus=true;
         this._resetCartData();
     },
 

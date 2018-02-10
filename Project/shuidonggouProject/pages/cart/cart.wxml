@@ -30,12 +30,13 @@
             </block>
         </view>
         <view class="footer-account-box all-accounts-box">
-            <view class="all-select" ontap="toggleSelectAll" data-status="{{selectedTypeCounts==cartData.length?'true':'false'}}">
-                <image wx:if="{{selectedTypeCounts==cartData.length}}"
+			<!-- ontap="toggleSelectAll" -->
+             <view class="all-select"  data-status="{{selectedTypeCounts==cartData.length?'true':'false'}}">
+                <!-- <image wx:if="{{selectedTypeCounts==cartData.length}}"
                        class="title-icon" src="../../images/icons/all@selected.png"></image>
-                <image wx:else class="title-icon" src="../../images/icons/all.png"></image>
-                <text>全选({{selectedCounts}})</text>
-            </view>
+                <image wx:else class="title-icon" src="../../images/icons/all.png"></image>-->
+                 <text>数量({{selectedCounts}})</text>  
+            </view> 
             <view class="all-price-submit {{account==0?'disabled':''}}" bindtap="submitOrder">
                 <view class="accounts-btn">下单</view>
                 <view class="price-text">￥{{account}}</view>

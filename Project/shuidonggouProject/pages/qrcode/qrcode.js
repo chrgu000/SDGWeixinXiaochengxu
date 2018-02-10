@@ -5,16 +5,19 @@ var qrcode;
 
 Page({
     data: {
-		userInfo:null,
-		ticketInfo:null
+		userInfo:null
     },
     onLoad: function (options) {
 		
-		var info = options.item;
-		var ascStr = this.str2Ascii(info)
-		console.log(ascStr)
+		var info = JSON.parse(options.item);
+		console.log(info)
+		this.setData({
+			userInfo: info
+		})
+		var ascStr = this.str2Ascii(info.thirdReserveNo)
+		
         qrcode = new QRCode('canvas', {
-			text: ascStr,
+			text: info.thirdReserveNo,
             width: 200,
             height: 200,
             colorDark: "#000000",

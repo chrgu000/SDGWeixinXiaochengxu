@@ -147,8 +147,9 @@ Page({
 			loadingHidden: true
 		});
 		var item = order.getDataSet(event, 'item');
+		console.log(item);
 		var rInfo = this.data.realInfo;
-		var urls = 'https://shuidonggou88.cn/zerg/public/api/v1/checkThirdTicket?orderNo=' + item.order_no + '&mobileNo=' + rInfo.mobile + '&IdentityNo=' + rInfo.cardid + '&name=' + rInfo.name + '&lstCount=' + item.total_count
+		var urls = 'https://shuidonggou88.cn/zerg/public/api/v1/checkThirdTicket?orderNo=' + item.order_no + '&mobileNo=' + rInfo.mobile + '&IdentityNo=' + rInfo.cardid + '&name=' + rInfo.name + '&lstCount=' + item.total_count + '&ticketNmae=' + item.snap_name + '&totalPrice=' + item.total_price + '&creatTime=' + item.create_time + '&styleNo=' + item.snap_styleNo
 		
 		wx.request({
 			url: urls,
@@ -157,7 +158,7 @@ Page({
 				'content-type': 'application/json',
 			},
 			success: function (res) {
-				var reserveNo = res.data.thirdReserveNo;
+				var reserveNo = JSON.stringify(res.data);
 				
 				wx.navigateTo({
 					url: '../qrcode/qrcode?item=' + reserveNo

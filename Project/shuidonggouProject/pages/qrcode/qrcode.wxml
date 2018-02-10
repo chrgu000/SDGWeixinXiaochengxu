@@ -1,3 +1,61 @@
 <!--pages/index/index.wxml-->
-
+<view class="weui-cells weui-cells_after-title" style="margin-top: 25px;">
+	<view class="weui-cell">
+		<view class="weui-cell__bd">小程序订单号</view>
+		<view class="weui-cell__ft">{{userInfo.orderNo}}</view>
+	</view>
+</view>
+<view class="weui-cells weui-cells_after-title" style="margin-top: 5px;">
+	<view class="weui-cell">
+		<view class="weui-cell__bd">兑换票订单号</view>
+		<view class="weui-cell__ft">{{userInfo.thirdOrderNo}}</view>
+	</view>
+</view>
+<view class="weui-cells weui-cells_after-title" style="margin-top: 5px;">
+	<view class="weui-cell">
+		<view class="weui-cell__bd">验证码</view>
+		<view class="weui-cell__ft">{{userInfo.thirdReserveNo}}</view>
+	</view>
+</view>
 <canvas class='canvas' canvas-id='canvas' bindlongtap='save'></canvas>
+
+<view class="weui-cells weui-cells_after-title" style="margin-top: 25px;">
+	<view class="weui-cell">
+		<view class="weui-cell__bd">门票名称</view>
+		<view class="weui-cell__ft">{{userInfo.ticketNmae}}</view>
+	</view>
+</view>
+
+<view class="weui-cells weui-cells_after-title" style="margin-top: 5px;">
+	<view class="weui-cell">
+		<view class="weui-cell__bd">数量</view>
+		<view class="weui-cell__ft">{{userInfo.totalCount}}</view>
+	</view>
+</view>
+<view class="weui-cells weui-cells_after-title" style="margin-top: 5px;">
+	<view class="weui-cell">
+		<view class="weui-cell__bd">总价</view>
+		<view class="weui-cell__ft">{{userInfo.totalPrice}}</view>
+	</view>
+</view>
+<view class="weui-cells weui-cells_after-title" style="margin-top: 5px;">
+	<view class="weui-cell">
+		<view class="weui-cell__bd">购票时间</view>
+		<view class="weui-cell__ft">{{userInfo.createTime}}</view>
+	</view>
+</view>
+
+<view class="weui-cells weui-cells_after-title" style="margin-top: 5px;">
+	<view class="weui-cell">
+		<view class="weui-cell__bd">说明</view>
+		<view class="weui-cell__ft">可凭验证码兑换纸质票，亦可使用本页二维码直接扫码验证</view>
+	</view>
+</view>
+
+<view class="weui-cells weui-cells_after-title" style="margin-top: 5px;margin-bottom: 25px;">
+	<view class="weui-cell">
+		<view class="weui-cell__bd">取票地点</view>
+		<view class="weui-cell__ft">123</view>
+	</view>
+</view>
+
