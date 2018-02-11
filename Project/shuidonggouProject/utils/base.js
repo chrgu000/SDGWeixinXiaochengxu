@@ -18,7 +18,7 @@ class Base{
       data: params.data,
       method: params.type,
       header:{
-        'content-type':'application/json',
+		  "Content-Type": "application/json",
         'token':wx.getStorageSync('token')
       },
       success:function(res){

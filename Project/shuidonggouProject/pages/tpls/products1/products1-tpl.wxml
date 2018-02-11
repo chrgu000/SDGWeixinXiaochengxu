@@ -8,7 +8,7 @@
 					<view class="weui-form-preview__value_in-hd">{{item.name}}</view>
 				</view>
 				<view class="weui-form-preview__bd">
-					<view class="weui-form-preview__item">
+					<view class="weui-form-preview__item" bindtap="onProductsDetail">
 						<view class="weui-form-preview__label">价格</view>
 						<view class="weui-form-preview__value">￥{{item.price}}</view>
 					</view>

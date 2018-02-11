@@ -12,7 +12,8 @@
         "pages/cangbingdongtwo/cangbingdongtwo",
         "pages/sceneDetail/sceneDetail",
         "pages/realinfo/realinfo",
-		"pages/qrcode/qrcode"
+        "pages/qrcode/qrcode",
+        "pages/ticketDetail/ticketDetail"
     ],
     "window": {
         "navigationBarTextStyle": "#FFFFFF",

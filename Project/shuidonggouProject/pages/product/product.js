@@ -37,12 +37,13 @@ Page({
     
 	wx.request({
 		url: 'https://shuidonggou88.cn/zerg/public/api/v1/getThirdTicket',
-		method: 'get',
+		method: 'GET',
 		header: {
-			'content-type': 'application/json',
+			"Content-Type": "application/json",
 		},
 		success: function (res) {
 			// var list = JSON.parse(res.data)
+			console.log(res);
 			that.setData({
 				productsArr: res.data
      		});
@@ -78,15 +79,17 @@ Page({
 		  url: '../cart/cart'
 	  })
   },
+  onProductsDetail: function (event) {
+	  wx.navigateTo({
+		  url: '../ticketDetail/ticketDetail'
+	  })
+
+  },
   onProductsItemTap:function(event){
     var id = product.getDataSet(event,'id')
     if(id == 100){
       wx.navigateTo({
         url: '../biaoqingGif/biaoqingGif'
-      })
-    }else{
-      wx.navigateTo({
-        url: '../productDetail/productDetail?id=' + id
       })
     }
     

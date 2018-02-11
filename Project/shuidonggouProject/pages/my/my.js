@@ -147,22 +147,38 @@ Page({
 			loadingHidden: true
 		});
 		var item = order.getDataSet(event, 'item');
-		console.log(item);
 		var rInfo = this.data.realInfo;
-		var urls = 'https://shuidonggou88.cn/zerg/public/api/v1/checkThirdTicket?orderNo=' + item.order_no + '&mobileNo=' + rInfo.mobile + '&IdentityNo=' + rInfo.cardid + '&name=' + rInfo.name + '&lstCount=' + item.total_count + '&ticketNmae=' + item.snap_name + '&totalPrice=' + item.total_price + '&creatTime=' + item.create_time + '&styleNo=' + item.snap_styleNo
-		
+		// var urls = 'https://shuidonggou88.cn/zerg/public/api/v1/checkThirdTicket?orderNo=' + item.order_no + '&mobileNo=' + rInfo.mobile + '&IdentityNo=' + rInfo.cardid + '&name=' + rInfo.name + '&lstCount=' + item.total_count + '&ticketNmae=' + item.snap_name + '&totalPrice=' + item.total_price + '&creatTime=' + item.create_time + '&styleNo=' + item.snap_styleNo;
+		var urls = 'https://shuidonggou88.cn/zerg/public/api/v1/checkThirdTicket';
 		wx.request({
 			url: urls,
-			method: 'get',
-			header: {
-				'content-type': 'application/json',
+			data: {
+				orderNo: item.order_no,
+				mobileNo: rInfo.mobile,
+				IdentityNo: rInfo.cardid,
+				name: rInfo.name,
+				lstCount: item.total_count,
+				ticketNmae: item.snap_name,
+				totalPrice: item.total_price,
+				creatTime: item.create_time,
+				styleNo: item.snap_styleNo
 			},
 			success: function (res) {
-				var reserveNo = JSON.stringify(res.data);
+				console.log(res);
+				if (res.data.errorCode > 0){
+					that.showTips('提示', '查询二维码失败,请联系景区售票处')
+					return;
+				}
+				if (res.data.id) {
+					var reserveNo = JSON.stringify(res.data);
+
+					wx.navigateTo({
+						url: '../qrcode/qrcode?item=' + reserveNo
+					});
+				}else{
+					that.showTips('提示', '查询失败,请联系景区售票处')
+				}
 				
-				wx.navigateTo({
-					url: '../qrcode/qrcode?item=' + reserveNo
-         		 });
 			}, fail: function (err) {
 				that.showTips('提示','查询订单失败')
 			}
