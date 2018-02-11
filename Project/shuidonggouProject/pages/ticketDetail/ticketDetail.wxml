@@ -1,18 +1,18 @@
 <view class="page">
-    <view class="page__hd">
-        <view class="page__title">冬季成人套票1: </view>
-        <view class="page__desc">注意事项：小程序及自助机仅售成人类套票，其余证件票请到票厅窗口购买。</view>
-		<view class="page__desc">使用方法：购买后生成二维码，可以直接入园使用。</view>
-		<view class="page__desc">使用时间：购票当日使用。</view>
-		<view class="page__desc">门票包含（76元/人）： 水洞沟遗址博物院、张三小店、水洞沟村、水洞沟标志碑、水洞沟遗址发掘点、芦花谷、明长城、藏兵洞。项目包含：博物馆内动感实景体验20元/人、南门到东门观光车20元/人、藏兵洞30元/人、观光车10元/人。</view>
+    <view class="page__hd" style="margin-top: 10px;margin-left: 10px;">
+        <view class="page__title"style="font-size:21px;">冬季成人套票1: </view>
+        <view class="page__desc " style="margin-top: 3px;margin-left: 10px;font-size:15px;">注意事项：小程序及自助机仅售成人类套票，其余证件票请到票厅窗口购买。</view>
+		<view class="page__desc" style="margin-top: 3px;margin-left: 10px;font-size:15px;">使用方法：购买后生成二维码，可以直接入园使用。</view>
+		<view class="page__desc" style="margin-top: 3px;margin-left: 10px;font-size:15px;">使用时间：购票当日使用。</view>
+		<view class="page__desc" style="margin-top: 3px;margin-left: 10px;font-size:15px;">门票包含（76元/人）： 水洞沟遗址博物院、张三小店、水洞沟村、水洞沟标志碑、水洞沟遗址发掘点、芦花谷、明长城、藏兵洞。项目包含：博物馆内动感实景体验20元/人、南门到东门观光车20元/人、藏兵洞30元/人、观光车10元/人。</view>
     </view>
    
-   <view class="page__hd" style="margin-top: 15px;">
-        <view class="page__title">冬季成人套票2: </view>
-        <view class="page__desc">注意事项：小程序及自助机仅售成人类套票，其余证件票请到票厅窗口购买。</view>
-		<view class="page__desc">使用方法：购买后生成二维码，可以直接入园使用。</view>
-		<view class="page__desc">使用时间：购票当日使用。</view>
-		<view class="page__desc">门票包含（76元/人）： 水洞沟遗址博物院、张三小店、水洞沟村、水洞沟标志碑、水洞沟遗址发掘点、芦花谷、明长城、藏兵洞、《天降神石》VR游戏。项目包含：博物馆内动感实景体验20元/人、南门到东门观光车20元/人、藏兵洞30元/人、观光车10元/人，VR游戏38元/人。</view>
+   <view class="page__hd" style="margin-top: 50px;margin-left: 10px;">
+        <view class="page__title"style="font-size:21px;" >冬季成人套票2: </view>
+        <view class="page__desc" style="margin-top: 3px;margin-left: 10px;font-size:15px;">注意事项：小程序及自助机仅售成人类套票，其余证件票请到票厅窗口购买。</view>
+		<view class="page__desc" style="margin-top: 3px;margin-left: 10px;font-size:15px;">使用方法：购买后生成二维码，可以直接入园使用。</view>
+		<view class="page__desc" style="margin-top: 3px;margin-left: 10px;font-size:15px;">使用时间：购票当日使用。</view>
+		<view class="page__desc" style="margin-top: 3px;margin-left: 10px;font-size:15px;">门票包含（76元/人）： 水洞沟遗址博物院、张三小店、水洞沟村、水洞沟标志碑、水洞沟遗址发掘点、芦花谷、明长城、藏兵洞、《天降神石》VR游戏。项目包含：博物馆内动感实景体验20元/人、南门到东门观光车20元/人、藏兵洞30元/人、观光车10元/人，VR游戏38元/人。</view>
     </view>
 
 </view>

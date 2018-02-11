@@ -8,13 +8,13 @@
 					<view class="weui-form-preview__value_in-hd">{{item.name}}</view>
 				</view>
 				<view class="weui-form-preview__bd">
-					<view class="weui-form-preview__item" bindtap="onProductsDetail">
+					<view class="weui-form-preview__item" >
 						<view class="weui-form-preview__label">价格</view>
 						<view class="weui-form-preview__value">￥{{item.price}}</view>
 					</view>
-					<view class="weui-form-preview__item">
-						<view class="weui-form-preview__label">说明</view>
-						<view class="weui-form-preview__value">{{item.summary}}</view>
+					<view class="weui-form-preview__item" bindtap="onProductsDetail">
+						<view class="weui-form-preview__label">门票说明</view>
+						<view class="weui-form-preview__value weui-cell__ft_in-access">点击进入查看</view>
 					</view>
 				</view>
 				<view class="weui-form-preview__ft">
